@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# AI Python Tutor 
 
-First, run the development server:
+This project is an interactive Python tutoring application powered by AI. It’s designed to help children learn Python programming through personalized interactions and quizzes.
+
+
+
+## Features
+
+- Select an AI Tutor Character: Choose your preferred AI tutor character for personalized interaction.
+- Ask Questions: Interact with the AI tutor by asking Python programming-related questions and receive detailed answers.
+- Take Quizzes: Test your Python knowledge with quizzes, and track your learning progress.
+- API Key Configuration: Set up your own OpenAI API key to customize your AI tutor’s responses.
+
+
+## Technologies Used
+
+- Next.js: A React framework for server-side rendering, static site generation, and API routes.
+- OpenAI API: Used for powering the AI tutor's responses and quizzes.
+- Tailwind CSS: For styling and responsive design.
+- Framer Motion: For smooth animations and transitions.
+- localStorage: For saving and configuring the OpenAI API key.
+
+## Prerequisites
+
+- Node.js (preferably version 14 or higher)
+- npm or yarn
+## Installation
+
+Clone the repository :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/preetiguragol/skc-assignment
+  cd skc-assignment
+```
+Install dependencies: 
+```bash
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Set up your OpenAI API key:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create an .env.local file in the root of the project.
+Add your OpenAI API key to the .env.local file:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+NEXT_PUBLIC_OPENAI_API_KEY=your-api-key-here
+```
 
-## Learn More
+Run the development server :
+```bash
+npm run dev
+```
+## How to use
+1. Open the application in your browser (http://localhost:3000 or https://skc-preetiguragol.vercel.app/).
+2. Go to the Settings page to enter and save your OpenAI API key.
+3. Choose your AI tutor character and start interacting with the AI by asking Python-related questions.
+4. Take quizzes to test and reinforce your Python knowledge.
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Deployment:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To deploy this Next.js application to Vercel:
+- Push changes to your Git repository.
+- Connect your Git repository to Vercel .
+- Set your environment variables in Vercel's dashboard under Settings > Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
