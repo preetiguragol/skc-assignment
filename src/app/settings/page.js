@@ -66,7 +66,7 @@ export default function Settings() {
           Save API Key
         </button>
         
-        {/* Center the "Go back to Home" Button */}
+        
         <div className="mt-6 flex justify-center">
           <Link href="/">
             <motion.button

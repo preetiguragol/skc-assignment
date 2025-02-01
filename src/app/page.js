@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-pink-300 to-yellow-200 text-white p-6">
-      {/* Heading */}
+      
       <motion.h1
         className="text-6xl font-bold text-center drop-shadow-xl text-purple-800"
         initial={{ opacity: 0, y: -20 }}
@@ -16,7 +16,7 @@ export default function Home() {
         Welcome to AI Python Tutor!
       </motion.h1>
 
-      {/* Description */}
+   
       <motion.p
         className="text-lg max-w-xl text-center mt-4 opacity-90 text-green-800 font-serif"
         initial={{ opacity: 0, y: 10 }}
@@ -27,21 +27,20 @@ export default function Home() {
         get real-time feedback and exciting lessons!
       </motion.p>
 
-      {/* Animated Buttons */}
       <motion.div
         className="flex space-x-6 mt-8"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
       >
-        {/* Start Learning Button */}
+        
         <Link href="/chat">
           <button className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:scale-110 transition duration-300 transform">
             Start Learning 🚀
           </button>
         </Link>
 
-        {/* Configure API Key Button */}
+     
         <Link href="/settings">
           <button className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:scale-110 transition duration-300 transform">
             Configure API Key 🔑
@@ -49,7 +48,7 @@ export default function Home() {
         </Link>
       </motion.div>
 
-      {/* Add Quiz Button */}
+    
       <motion.div
         className="mt-6"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -63,7 +62,7 @@ export default function Home() {
         </Link>
       </motion.div>
 
-      {/* Tagline or Motto */}
+     
       <motion.div
         className="mt-8"
         initial={{ opacity: 0, y: 10 }}

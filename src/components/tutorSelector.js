@@ -12,7 +12,7 @@ const tutors = [
 export default function TutorSelector({ onSelect }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-pink-300 to-yellow-200 text-gray-900 p-6">
-      {/* Heading */}
+     
       <motion.h2
         className="text-4xl font-extrabold text-purple-700 mb-8 text-center"
         initial={{ opacity: 0, y: -20 }}
@@ -22,7 +22,7 @@ export default function TutorSelector({ onSelect }) {
         Choose Your AI Tutor
       </motion.h2>
 
-      {/* Tutors Grid */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {tutors.map((tutor) => (
           <motion.button
