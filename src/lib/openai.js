@@ -13,7 +13,7 @@ export const sendMessageToOpenAI = async (messages, userApiKey) => {
         Authorization: `Bearer ${apiKey}`, // Use the provided API key
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",  // Change to another model if needed
+        model: "gpt-3.5-turbo",  
         messages,
         max_tokens: 150,
         temperature: 0.7,
@@ -26,12 +26,12 @@ export const sendMessageToOpenAI = async (messages, userApiKey) => {
       return data.choices[0]?.message?.content.trim();
     } else {
       const errorMessage = data.error?.message || "Error with OpenAI API.";
-      alert(`Error: ${errorMessage}`);  // Display the error message in an alert
+      alert(`Error: ${errorMessage}`);  
       throw new Error(errorMessage);
     }
   } catch (error) {
     console.error("Error in sendMessageToOpenAI:", error);
-    alert(`API Error: ${error.message}`);  // Show the error message in an alert
+    alert(`API Error: ${error.message}`);  
     throw error;
   }
 };

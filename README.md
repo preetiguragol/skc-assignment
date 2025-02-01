@@ -15,11 +15,11 @@ This project is an interactive Python tutoring application powered by AI. It’s
 
 ## Technologies Used
 
-- Next.js: A React framework for server-side rendering, static site generation, and API routes.
-- OpenAI API: Used for powering the AI tutor's responses and quizzes.
-- Tailwind CSS: For styling and responsive design.
-- Framer Motion: For smooth animations and transitions.
-- localStorage: For saving and configuring the OpenAI API key.
+- **Next.js**: A React framework for server-side rendering, static site generation, and API routes.
+- **OpenAI API**: Used for powering the AI tutor's responses and quizzes.
+- **Tailwind CSS**: For styling and responsive design.
+- **Framer Motion**: For smooth animations and transitions.
+- **LocalStorage**: For saving and configuring the OpenAI API key.
 
 ## Prerequisites
 
@@ -52,10 +52,7 @@ Run the development server :
 npm run dev
 ```
 ## How to use
-1. Open the application in your browser (http://localhost:3000 or https://skc-preetiguragol.vercel.app/).
-2. Go to the Settings page to enter and save your OpenAI API key.
-3. Choose your AI tutor character and start interacting with the AI by asking Python-related questions.
-4. Take quizzes to test and reinforce your Python knowledge.
+Open the application in your browser (http://localhost:3000 or https://skc-preetiguragol.vercel.app/).
 ## Deployment
 
 Deployment:
@@ -69,5 +66,5 @@ To deploy this Next.js application to Vercel:
 ![alt text](<Screenshot 2025-02-01 171731.png>)
 ![alt text](<Screenshot 2025-02-01 171741.png>)
 ![alt text](<Screenshot 2025-02-01 171755.png>)
-![alt text](<Screenshot 2025-02-01 171802.png>)
+![alt text](<Screenshot 2025-02-01 215224.png>)
 ![alt text](<Screenshot 2025-02-01 171818.png>)
