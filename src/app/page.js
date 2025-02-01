@@ -43,8 +43,22 @@ export default function Home() {
 
         {/* Configure API Key Button */}
         <Link href="/settings">
-          <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:scale-110 transition duration-300 transform">
+          <button className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:scale-110 transition duration-300 transform">
             Configure API Key 🔑
+          </button>
+        </Link>
+      </motion.div>
+
+      {/* Add Quiz Button */}
+      <motion.div
+        className="mt-6"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+      >
+        <Link href="/quiz">
+          <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:scale-110 transition duration-300 transform">
+            Take the Quiz 📝
           </button>
         </Link>
       </motion.div>

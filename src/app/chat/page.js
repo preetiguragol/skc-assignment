@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import TutorSelector from "@/components/TutorSelector";
-import { sendMessageToOpenAI } from "@/lib/openai";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import TutorSelector from "@/components/tutorSelector";
+import { sendMessageToOpenAI } from "@/lib/openai";
 
 export default function Chat() {
   const [messages, setMessages] = useState([]);
@@ -100,6 +101,13 @@ export default function Chat() {
         <Link href="/">
           <button className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 font-bold text-white px-6 py-2 rounded-lg shadow-lg hover:scale-105 transition duration-300">
             Go to Home 🏠
+          </button>
+        </Link>
+
+        {/* Link to Quiz Page */}
+        <Link href="/quiz">
+          <button className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-500 font-bold text-white px-6 py-2 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+            Take Quiz 📝
           </button>
         </Link>
       </div>
