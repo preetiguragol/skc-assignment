@@ -67,7 +67,7 @@ To deploy this Next.js application to Vercel:
 
 ## Screenshots
 ![alt text](<Screenshot 2025-02-01 171731.png>)
-![alt text](<Screenshot 2025-02-01 171755.png>)
 ![alt text](<Screenshot 2025-02-01 171741.png>)
+![alt text](<Screenshot 2025-02-01 171755.png>)
 ![alt text](<Screenshot 2025-02-01 171802.png>)
 ![alt text](<Screenshot 2025-02-01 171818.png>)
