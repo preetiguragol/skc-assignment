@@ -3,7 +3,7 @@
 
 This project is an interactive Python tutoring application powered by AI. It’s designed to help children learn Python programming through personalized interactions and quizzes.
 
-
+-   Live Frontend : https://skc-preetiguragol.vercel.app/
 
 ## Features
 
@@ -65,3 +65,9 @@ To deploy this Next.js application to Vercel:
 - Connect your Git repository to Vercel .
 - Set your environment variables in Vercel's dashboard under Settings > Environment Variables
 
+## Screenshots
+![alt text](<Screenshot 2025-02-01 171731.png>)
+![alt text](<Screenshot 2025-02-01 171755.png>)
+![alt text](<Screenshot 2025-02-01 171741.png>)
+![alt text](<Screenshot 2025-02-01 171802.png>)
+![alt text](<Screenshot 2025-02-01 171818.png>)
