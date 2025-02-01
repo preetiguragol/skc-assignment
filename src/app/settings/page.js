@@ -9,8 +9,11 @@ export default function Settings() {
   const [isUserInteracting, setIsUserInteracting] = useState(false);
 
   useEffect(() => {
+    // Load API key from localStorage if available
     const storedKey = localStorage.getItem("apiKey");
-    if (storedKey) setApiKey(storedKey);
+    if (storedKey) {
+      setApiKey(storedKey);
+    }
   }, []);
 
   const saveApiKey = () => {
@@ -20,6 +23,19 @@ export default function Settings() {
     }
     localStorage.setItem("apiKey", apiKey);
     alert("API Key saved!");
+
+    // Reload the page to make sure the new API key is used
+    window.location.reload();
+  };
+
+  const clearApiKey = () => {
+    localStorage.removeItem("apiKey");
+    setApiKey(""); // Clear the state
+
+    alert("API Key cleared!");
+
+    // Reload the page to ensure API key is removed
+    window.location.reload();
   };
 
   return (
@@ -65,7 +81,14 @@ export default function Settings() {
         >
           Save API Key
         </button>
-        
+
+        {/* Clear API Key button */}
+        <button 
+          onClick={clearApiKey}
+          className="w-full bg-red-500 text-white font-semibold py-3 rounded-lg mt-4 hover:bg-red-600 transition duration-300 transform hover:scale-105"
+        >
+          Clear API Key
+        </button>
         
         <div className="mt-6 flex justify-center">
           <Link href="/">

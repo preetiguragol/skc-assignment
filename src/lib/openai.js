@@ -1,9 +1,9 @@
-export const sendMessageToOpenAI = async (messages) => {
-  // Retrieve the API key from the environment variables first
-  const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY || localStorage.getItem("apiKey");
+// openai.js
+export const sendMessageToOpenAI = async (messages, userApiKey) => {
+  const apiKey = userApiKey || process.env.NEXT_PUBLIC_OPENAI_API_KEY; // Use user-provided key if available
 
   if (!apiKey) {
-    throw new Error("API key is missing. Please enter your key in Settings.");
+    throw new Error("API key is missing. Please enter an API key.");
   }
 
   try {
@@ -11,11 +11,11 @@ export const sendMessageToOpenAI = async (messages) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`, // Using the API key from env or localStorage
+        Authorization: `Bearer ${apiKey}`, // Use the provided API key
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo", 
-        messages: messages, 
+        model: "gpt-3.5-turbo",  // Change to another model if needed
+        messages,
         max_tokens: 150,
         temperature: 0.7,
       }),
@@ -24,7 +24,7 @@ export const sendMessageToOpenAI = async (messages) => {
     const data = await response.json();
 
     if (response.ok) {
-      return data.choices[0]?.message?.content?.trim(); 
+      return data.choices[0]?.message?.content.trim();
     } else {
       throw new Error(data.error?.message || "Error with OpenAI API.");
     }
