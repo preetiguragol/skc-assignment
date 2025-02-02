@@ -34,7 +34,7 @@ export default function Settings() {
 
     alert("API Key cleared!");
 
-    // Reload the page to ensure API key is removed
+   
     window.location.reload();
   };
 
@@ -82,7 +82,7 @@ export default function Settings() {
           Save API Key
         </button>
 
-        {/* Clear API Key button */}
+        
         <button 
           onClick={clearApiKey}
           className="w-full bg-red-500 text-white font-semibold py-3 rounded-lg mt-4 hover:bg-red-600 transition duration-300 transform hover:scale-105"

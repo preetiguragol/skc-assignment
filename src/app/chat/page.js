@@ -18,7 +18,7 @@ export default function Chat() {
   const handleApiKeyChange = (e) => {
     const newKey = e.target.value;
     setApiKey(newKey);
-    localStorage.setItem("apiKey", newKey); // Save API key for persistence
+    localStorage.setItem("apiKey", newKey); 
   };
 
   const sendMessage = async () => {
@@ -30,7 +30,7 @@ export default function Chat() {
     setInput("");
 
     try {
-      const aiResponse = await sendMessageToOpenAI(updatedMessages, apiKey); // Pass API key to function
+      const aiResponse = await sendMessageToOpenAI(updatedMessages, apiKey); 
       setMessages([...updatedMessages, { role: "assistant", content: aiResponse }]);
     } catch (error) {
       console.error("Error:", error);

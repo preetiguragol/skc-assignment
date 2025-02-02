@@ -1,5 +1,5 @@
 export const sendMessageToOpenAI = async (messages, userApiKey) => {
-  const apiKey = userApiKey || process.env.NEXT_PUBLIC_OPENAI_API_KEY; // Use user-provided key if available
+  const apiKey = userApiKey || process.env.NEXT_PUBLIC_OPENAI_API_KEY; 
 
   if (!apiKey) {
     throw new Error("API key is missing. Please enter an API key.");
@@ -10,7 +10,7 @@ export const sendMessageToOpenAI = async (messages, userApiKey) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`, // Use the provided API key
+        Authorization: `Bearer ${apiKey}`, 
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",  
